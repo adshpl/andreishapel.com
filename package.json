@@ -1,0 +1,30 @@
+{
+  "name": "andreishapel.com",
+  "version": "1.0.0",
+  "repository": "https://github.com/adshpl/andreishapel.com",
+  "author": "Andrei Shapel <mail@andreishapel.com>",
+  "license": "None",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prebuild": "yarn clean",
+    "postinstall": "yarn test",
+    "clean": "rimraf dist",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "@vaadin/router": "^1.7.5",
+    "lit": "^2.7.4",
+    "lit-translate": "^2.0.1",
+    "normalize.css": "^8.0.1",
+    "pino": "^8.14.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.1",
+    "parcel-bundler": "^1.12.5",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.0.4"
+  }
+}
