@@ -21,11 +21,11 @@ export const setupTranslations = (): Promise<void> => {
 };
 
 export const translate = (key: string) => {
-  const value = get(key);
-  console.log('@@', key, value);
-  if (!value) {
-    logger.error(`Translation not found for key: ${key}`);
-    return '';
+  const value = get(key) || null;
+  const translationValueNotFound = !value || (value.startsWith('[') && value.endsWith(']'));
+  if (translationValueNotFound) {
+    logger.warn(`Translation not found for key: ${key}`);
+    return value;
   }
 
   return get(key);
