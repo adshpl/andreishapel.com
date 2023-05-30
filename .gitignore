@@ -2,6 +2,10 @@
 dist
 node_modules
 
+# Cache
+.cache
+.parcel-cache
+
 # Logs
 logs
 *.log
@@ -16,10 +20,6 @@ lerna-debug.log*
 # Tests
 coverage
 .nyc_output
-
-# Misc
-.cache
-.parcel-cache
 
 # IDEs
 .idea
