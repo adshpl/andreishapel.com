@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "repository": "https://github.com/adshpl/andreishapel.com",
   "author": "Andrei Shapel <mail@andreishapel.com>",
-  "license": "None",
+  "license": "UNLICENSED",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.19"
+  },
   "scripts": {
     "prebuild": "yarn clean",
     "postinstall": "yarn test",
