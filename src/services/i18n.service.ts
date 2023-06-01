@@ -1,10 +1,10 @@
 import { registerTranslateConfig, use, get } from 'lit-translate';
-import { logger } from './logger';
-import { Locales } from '../constants/locales';
+import { loggerService } from './logger.service';
+import { LocalesConstant } from '../constants/locales.constant';
 import enLocales from '../locales/en.json';
 
 export const setupTranslations = (): Promise<void> => {
-  const { English } = Locales;
+  const { English } = LocalesConstant;
 
   registerTranslateConfig({
     loader: async (language: string) => {
@@ -24,7 +24,7 @@ export const translate = (key: string) => {
   const value = get(key) || null;
   const translationValueNotFound = !value || (value.startsWith('[') && value.endsWith(']'));
   if (translationValueNotFound) {
-    logger.warn(`Translation not found for key: ${key}`);
+    loggerService.warn(`Translation not found for key: ${key}`);
     return value;
   }
 

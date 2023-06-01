@@ -1,5 +1,5 @@
 import { Router } from '@vaadin/router';
-import { routes } from '../constants/routes';
+import { routesConstant } from '../constants/routes.constant';
 
 export const setupRoutes = (mountTo: Element | null): Promise<Node> => {
   if (!mountTo) {
@@ -7,5 +7,5 @@ export const setupRoutes = (mountTo: Element | null): Promise<Node> => {
   }
 
   const router = new Router(mountTo);
-  return router.setRoutes(routes);
+  return router.setRoutes(routesConstant);
 };

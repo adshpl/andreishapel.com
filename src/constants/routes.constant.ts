@@ -1,8 +1,8 @@
 import { Route } from '@vaadin/router';
-export * from '../pages/home';
-export * from '../pages/not-found';
+export * from '../pages/home.page';
+export * from '../pages/not-found.page';
 
-export const routes: Route[] = [
+export const routesConstant: Route[] = [
   {
     path: '/',
     component: 'home-page',

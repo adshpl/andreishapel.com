@@ -1,9 +1,9 @@
-import { setupRoutes } from './services/router';
-import { setupTranslations } from './services/i18n';
-import { logger } from './services/logger';
+import { setupRoutes } from './services/router.service';
+import { setupTranslations } from './services/i18n.service';
+import { loggerService } from './services/logger.service';
 
 (async () => {
-  logger.info('Application initialization started');
+  loggerService.info('Application initialization started');
 
   try {
     const applicationElement = document.querySelector('#application');
@@ -12,8 +12,8 @@ import { logger } from './services/logger';
       setupRoutes(applicationElement),
     ]);
   } catch (error) {
-    logger.error(`Application initialization error: ${error}`);
+    loggerService.error(`Application initialization error: ${error}`);
   }
 
-  logger.info('Application initialization finished');
+  loggerService.info('Application initialization finished');
 })();

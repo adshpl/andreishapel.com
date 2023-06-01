@@ -1,4 +1,4 @@
-export enum Locales {
+export enum LocalesConstant {
   English = 'en',
   Russian = 'ru',
 }
