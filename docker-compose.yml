@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: yarn watch
+    container_name: app
+    image: server
+    ports:
+      - 1234:1234
+    environment:
+      KEY: value
+    volumes:
+      - .:/usr/app
