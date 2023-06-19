@@ -1,3 +1,4 @@
+import 'normalize.css';
 import { setupRoutes } from './services/router.service';
 import { setupTranslations } from './services/i18n.service';
 import { loggerService } from './services/logger.service';

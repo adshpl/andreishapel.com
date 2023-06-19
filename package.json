@@ -7,16 +7,15 @@
   "type": "module",
   "private": true,
   "engines": {
-    "node": "16.x",
-    "yarn": "^0.14.0"
+    "node": "16.x"
   },
   "scripts": {
-    "prebuild": "yarn clean",
-    "postinstall": "yarn test",
+    "prebuild": "npm run clean",
+    "postinstall": "npm run test",
     "clean": "rimraf dist",
     "watch": "cross-env NODE_ENV=development parcel src/index.html",
     "build": "cross-env NODE_ENV=production parcel build src/index.html",
-    "lint": "yarn lint:ts && yarn lint:css",
+    "lint": "npm run lint:ts && npm run lint:css",
     "lint:ts": "eslint 'src/**/*.ts' && lit-analyzer 'src/**/*.ts'",
     "lint:css": "stylelint 'src/**/*.ts'",
     "test": "echo 'No tests specified'"
